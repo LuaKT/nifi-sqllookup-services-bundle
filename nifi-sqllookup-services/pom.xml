@@ -20,7 +20,7 @@
     <parent>
         <groupId>com.mrcsparker</groupId>
         <artifactId>nifi-sqllookup-services-bundle</artifactId>
-        <version>1.7.1</version>
+        <version>1.9.2</version>
     </parent>
 
     <artifactId>nifi-sqllookup-services</artifactId>
@@ -155,6 +155,16 @@
                         <exclude>src/test/resources/test.properties</exclude>
                         <exclude>src/test/resources/test.xml</exclude>
                     </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.1</version>
+                <configuration>
+                    <useFile>false</useFile>
+                    <trimStackTrace>false</trimStackTrace>
+                    <redirectTestOutputToFile>true</redirectTestOutputToFile>
                 </configuration>
             </plugin>
         </plugins>
